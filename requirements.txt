@@ -1,0 +1,8 @@
+# BASIC FOR SERVICE
+pydantic==2.9.2
+pydantic-settings==2.5.2
+celery==5.4.0
+redis==5.1.1
+minio==7.2.9
+confluent-kafka==2.6.0
+git+https://github.com/gabrielerrvzla/easy-log.git

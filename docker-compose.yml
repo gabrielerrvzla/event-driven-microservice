@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+  worker:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: celery -A service.integrations.celery worker --loglevel=info
+    env_file:
+      - .env
+
+  consumer:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: python3 -m service
+    env_file:
+      - .env
